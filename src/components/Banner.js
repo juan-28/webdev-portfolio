@@ -64,9 +64,9 @@ export const Banner = () => {
                     isVisible ? "animate__animated animate__fadeIn" : ""
                   }
                 >
-                  <span className="tagline">Welcome to my Website</span>
+                  <span className="tagline">Portfolio Website :)</span>
                   <h1>
-                    {`Hi, I'm Pranav!`}{" "}
+                    {`I'm an aspiring `}{" "}
                     <span
                       className="txt-rotate"
                       dataPeriod="1000"
@@ -94,8 +94,9 @@ export const Banner = () => {
                     problem-solving, as well a bit about me. Feel free to look
                     around and contact me if you have any questions!
                   </p>
+
                   <button onClick={() => console.log("connect")}>
-                    Let’s Connect <ArrowRightCircle size={25} />
+                    Contact Me <ArrowRightCircle size={25} />
                   </button>
                 </div>
               )}
