@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { Navbar, Nav, Container } from "react-bootstrap";
 import logo from "../assets/img/logonew.svg";
 import navIcon1 from "../assets/img/nav-icon1.svg";
-import navIcon2 from "../assets/img/nav-icon2.svg";
+import navIcon2 from "../assets/img/github-mark-white.svg";
 import navIcon3 from "../assets/img/nav-icon3.svg";
 import { HashLink } from "react-router-hash-link";
 import { BrowserRouter as Router } from "react-router-dom";
@@ -79,7 +79,7 @@ export const NavBar = () => {
                 >
                   <img src={navIcon1} alt="LinkedIn" />
                 </a>
-                <a href="#">
+                <a href="https://github.com/juan-28" target="_blank">
                   <img src={navIcon2} alt="GitHub" />
                 </a>
                 <a href="#">
