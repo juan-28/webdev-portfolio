@@ -50,7 +50,7 @@ export const NavBar = () => {
               >
                 Home
               </Nav.Link>
-              <Nav.Link
+              {/* <Nav.Link
                 href="#skills"
                 className={
                   activeLink === "skills" ? "active navbar-link" : "navbar-link"
@@ -69,7 +69,7 @@ export const NavBar = () => {
                 onClick={() => onUpdateActiveLink("projects")}
               >
                 Projects
-              </Nav.Link>
+              </Nav.Link> */}
             </Nav>
             <span className="navbar-text">
               <div className="social-icon">
@@ -80,7 +80,7 @@ export const NavBar = () => {
                   <img src={navIcon1} alt="LinkedIn" />
                 </a>
                 <a href="#">
-                  <img src={navIcon2} alt="" />
+                  <img src={navIcon2} alt="GitHub" />
                 </a>
                 <a href="#">
                   <img src={navIcon3} alt="" />

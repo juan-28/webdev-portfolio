@@ -67,6 +67,11 @@ img {
   height: auto;
 }
 
+img.two {
+  width: 30%;
+  height: auto;
+}
+
 button {
   border: 0;
   background-color: transparent;
@@ -113,7 +118,7 @@ nav.navbar .navbar-nav .nav-link.navbar-link {
   color: #fff !important;
   letter-spacing: 0.8px;
   padding: 0 25px;
-  font-size: 18px;
+  font-size: 20px;
   opacity: 0.75;
 }
 nav.navbar .navbar-nav a.nav-link.navbar-link:hover,
@@ -264,7 +269,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   );
   border: 1px solid rgba(255, 255, 255, 0.5);
   font-size: 20px;
-  margin-bottom: 16px;
+  margin-bottom: 30px;
   display: inline-block;
 }
 .banner h1 {
@@ -285,49 +290,84 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 .banner button {
   color: #fff;
   font-weight: 700;
-  font-size: 20px;
+  font-size: 22px;
   margin-top: 60px;
-  letter-spacing: 0.8px;
+  letter-spacing: 0.9px;
   display: flex;
   align-items: center;
 }
-.banner button svg {
+
+.contact-button {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 700;
+  font-size: 22px;
+  margin-top: 60px;
+  letter-spacing: 0.9px;
+  display: flex;
+  align-items: center;
+  /* Specific styles for the Contact Me button */
+  margin-bottom: 30px; /* adds space between the buttons */
+}
+
+.resume-button {
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 22px;
+  margin-top: 40px;
+  letter-spacing: 0.9px;
+  display: flex;
+  align-items: center;
+  /* Specific styles for the Resume button */
+}
+
+.banner .resume-button svg {
   font-size: 25px;
   margin-left: 10px;
-  transition: 0.3s ease-in-out;
+  transition: 0.3s ease-n-out;
   line-height: 1;
 }
-.banner button:hover svg {
-  margin-left: 25px;
+.banner .resume-button:hover svg {
+  margin-left: 15px;
 }
+
+.content-box {
+  border: 2px solid rgba(238, 211, 235, 0.122); /* Border for the box */
+  padding: 20px; /* Padding inside the box */
+  border-radius: 10px; /* Rounded corners */
+  margin: 10px 0; /* Space around the box */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+}
+
 .banner img {
   animation: updown 3s linear infinite;
 }
 @keyframes updown {
   0% {
-    transform: translateY(-20px);
+    transform: translateY(-10px);
   }
   50% {
-    transform: translateY(20px);
+    transform: translateY(30px);
   }
   100% {
-    transform: translateY(-20px);
+    transform: translateY(-10px);
   }
 }
 .txt-rotate > .wrap {
   border-right: 0.08em solid #666;
 }
 
-/************ Skills Css ************/
+/*********** Experience and Skills Css ************/
 .skill {
-  padding: 0 0 50px 0;
+  padding: 110px 0 50px 0;
   position: relative;
 }
 .skill-bx {
   background: #151515;
   border-radius: 64px;
   text-align: center;
-  padding: 60px 50px;
+  padding: 60px 40px;
   margin-top: -60px;
 }
 .skill h2 {
@@ -342,7 +382,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   margin: 14px 0 75px 0;
 }
 .skill-slider {
-  width: 80%;
+  width: 90%;
   margin: 0 auto;
   position: relative;
 }
@@ -379,20 +419,20 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   width: 56%;
 }
 .project .nav.nav-pills {
-  width: 72%;
+  width: 75%;
   margin: 0 auto;
   border-radius: 50px;
   background-color: rgb(255 255 255 / 10%);
   overflow: hidden;
 }
 .project .nav.nav-pills .nav-item {
-  width: 33.33333%;
+  width: 33.33333333333333%;
 }
 .project .nav.nav-pills .nav-link {
   background-color: transparent;
   border-radius: 0;
   padding: 17px 0;
-  color: #fff;
+  color: rgb(255, 255, 255);
   width: 100%;
   font-size: 17px;
   letter-spacing: 0.8px;
@@ -402,12 +442,13 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   text-align: center;
   z-index: 0;
 }
+
 .project .nav.nav-pills .nav-link::before {
   content: "";
   position: absolute;
   width: 0;
   height: 100%;
-  background: linear-gradient(90.21deg, #aa367c -5.91%, #4a2fbd 111.58%);
+  background: linear-gradient(90.21deg, #e662b1 -5.91%, #4d2be4 111.58%);
   top: 0;
   left: 0;
   z-index: -1;
@@ -440,11 +481,11 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 .proj-imgbx::before {
   content: "";
   background: linear-gradient(90.21deg, #aa367c -5.91%, #4a2fbd 111.58%);
-  opacity: 0.85;
+  opacity: 0.7;
   position: absolute;
   width: 100%;
   height: 0;
-  transition: 0.4s ease-in-out;
+  transition: 0.2s ease-in-out;
 }
 .proj-imgbx:hover::before {
   height: 100%;
@@ -472,7 +513,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 .proj-txtx span {
   font-style: italic;
   font-weight: 400;
-  font-size: 15px;
+  font-size: 18px;
   letter-spacing: 0.8px;
 }
 .background-image-right {
@@ -487,10 +528,10 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 /************ Projects Css ************/
 .contact {
   background: linear-gradient(90.21deg, #aa367c -5.91%, #4a2fbd 111.58%);
-  padding: 60px 0 200px 0;
+  padding: 50px 0 250px 0;
 }
 .contact img {
-  width: 92%;
+  width: 100%;
 }
 .contact h2 {
   font-size: 45px;

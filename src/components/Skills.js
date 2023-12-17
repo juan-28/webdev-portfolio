@@ -19,11 +19,11 @@ export const Skills = () => {
     },
     desktop: {
       breakpoint: { max: 3000, min: 1024 },
-      items: 3,
+      items: 4,
     },
     tablet: {
       breakpoint: { max: 1024, min: 464 },
-      items: 2,
+      items: 3,
     },
     mobile: {
       breakpoint: { max: 464, min: 0 },
@@ -37,27 +37,28 @@ export const Skills = () => {
         <div className="row">
           <div className="col-12">
             <div className="skill-bx wow zoomIn">
-              <h2>Skills</h2>
-              <p>
-                Here are some of the skills I have under my arsenal:<br></br>{" "}
-                Lorem Ipsum has been the industry's standard dummy text.
-              </p>
+              <h2>Experience and Skills</h2>
+              <p>Here are some of the skills I have under my arsenal:</p>
               <Carousel
                 responsive={responsive}
                 infinite={true}
                 className="owl-carousel owl-theme skill-slider"
               >
                 <div className="item">
-                  <img src={meter1} alt="Image" />
+                  <p>Programming Languages</p>
                   <h5>Python, R, SQL</h5>
                 </div>
                 <div className="item">
-                  <img src={meter2} alt="Image" />
-                  <h5>Machine Learning</h5>
+                  <p>Data Analysis</p>
+                  <h5>Machine Learning, Data Mining, Statistics</h5>
                 </div>
                 <div className="item">
-                  <img src={meter3} alt="Image" />
+                  <p>Web Development</p>
                   <h5>JavaScript, HTML, CSS</h5>
+                </div>
+                <div className="item">
+                  <p>Big Data Tools</p>
+                  <h5>Spark, Zeppelin, Tableau, AWS</h5>
                 </div>
               </Carousel>
             </div>

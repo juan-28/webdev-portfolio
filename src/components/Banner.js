@@ -64,40 +64,46 @@ export const Banner = () => {
                     isVisible ? "animate__animated animate__fadeIn" : ""
                   }
                 >
-                  <span className="tagline">Portfolio Website :)</span>
-                  <h1>
-                    {`I'm an aspiring `}{" "}
-                    <span
-                      className="txt-rotate"
-                      dataPeriod="1000"
-                      data-rotate='[ "Data Analyst", "Data Scientist" ]'
+                  <div className="content-box">
+                    {" "}
+                    {/* New div wrapper */}
+                    <span className="tagline">Welcome to my Portfolio :)</span>
+                    <h1>
+                      {`I'm an aspiring `}{" "}
+                      <span className="txt-rotate">
+                        <span className="wrap">{text}</span>
+                      </span>
+                    </h1>
+                    <p>
+                      I'm Surya Pranav Sukumaran, a recent Boston University
+                      graduate with a Master's degree in Applied Data Analytics.
+                      <p></p>
+                      My technical skills extends to robust technologies like
+                      Apache Spark and Kafka for big data processing, TensorFlow
+                      for building and deploying machine learning models, and
+                      PostgreSQL for database design and management. I am also
+                      proficient in cloud computing platforms, including AWS and
+                      Google Cloud, which are integral to managing scalable
+                      solutions. My favourite language is Python because of it's
+                      extensive capabilities and continued support within the
+                      community.
+                      <p></p>
+                      On my site, you'll find a selection of projects that
+                      showcase my hands-on experience with data-driven
+                      problem-solving, as well a bit about me. Feel free to look
+                      around and contact me if you have any questions!
+                    </p>
+                    <a href="#connect" className="button resume-button">
+                      Contact Me <ArrowRightCircle size={25} />
+                    </a>
+                    <a
+                      href="resume.pdf"
+                      target="_blank"
+                      className="button resume-button"
                     >
-                      <span className="wrap">{text}</span>
-                    </span>
-                  </h1>
-                  <p>
-                    I'm Surya Pranav Sukumaran, a recent Boston University
-                    graduate with a Master's degree in Applied Data Analytics.
-                    <p></p>
-                    My technical skills extends to robust technologies like
-                    Apache Spark and Kafka for big data processing, TensorFlow
-                    for building and deploying machine learning models, and
-                    PostgreSQL for database design and management. I am also
-                    proficient in cloud computing platforms, including AWS and
-                    Google Cloud, which are integral to managing scalable
-                    solutions. My favourite language is Python because of it's
-                    extensive capabilities and continued support within the
-                    community.
-                    <p></p>
-                    On my site, you'll find a selection of projects that
-                    showcase my hands-on experience with data-driven
-                    problem-solving, as well a bit about me. Feel free to look
-                    around and contact me if you have any questions!
-                  </p>
-
-                  <button onClick={() => console.log("connect")}>
-                    Contact Me <ArrowRightCircle size={25} />
-                  </button>
+                      My Resume <ArrowRightCircle size={25} />
+                    </a>
+                  </div>
                 </div>
               )}
             </TrackVisibility>
@@ -110,7 +116,7 @@ export const Banner = () => {
                     isVisible ? "animate__animated animate__zoomIn" : ""
                   }
                 >
-                  <img src={headerImg} alt="Header Img" />
+                  {/* <img src={headerImg} alt="Header Img" /> */}
                 </div>
               )}
             </TrackVisibility>
