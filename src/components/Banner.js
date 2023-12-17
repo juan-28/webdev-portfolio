@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import headerImg from "../assets/img/header-img.svg";
+import headerImg from "../assets/img/newbannerpic.png";
 import { ArrowRightCircle } from "react-bootstrap-icons";
 import "animate.css";
 import TrackVisibility from "react-on-screen";
@@ -11,8 +11,8 @@ export const Banner = () => {
   const [text, setText] = useState("");
   const [delta, setDelta] = useState(300 - Math.random() * 100);
   const [index, setIndex] = useState(1);
-  const toRotate = ["Data Analyst", "Data Scientist", "ML Enthusiast"];
-  const period = 2000;
+  const toRotate = ["Data Analyst", "Data Scientist"];
+  const period = 200;
 
   useEffect(() => {
     let ticker = setInterval(() => {
@@ -34,18 +34,19 @@ export const Banner = () => {
     setText(updatedText);
 
     if (isDeleting) {
-      setDelta((prevDelta) => prevDelta / 2);
+      setDelta((prevDelta) => Math.max(50, prevDelta / 2));
     }
 
     if (!isDeleting && updatedText === fullText) {
       setIsDeleting(true);
+      setDelta(period);
       setIndex((prevIndex) => prevIndex - 1);
       setDelta(period);
     } else if (isDeleting && updatedText === "") {
       setIsDeleting(false);
       setLoopNum(loopNum + 1);
       setIndex(1);
-      setDelta(500);
+      setDelta(300);
     } else {
       setIndex((prevIndex) => prevIndex + 1);
     }
@@ -63,33 +64,35 @@ export const Banner = () => {
                     isVisible ? "animate__animated animate__fadeIn" : ""
                   }
                 >
-                  <span className="tagline">Welcome to my Portfolio</span>
+                  <span className="tagline">Welcome to my Website</span>
                   <h1>
                     {`Hi, I'm Pranav!`}{" "}
                     <span
                       className="txt-rotate"
                       dataPeriod="1000"
-                      data-rotate='[ "Data Analyst", "Data Scientist", "ML Enthusiast" ]'
+                      data-rotate='[ "Data Analyst", "Data Scientist" ]'
                     >
                       <span className="wrap">{text}</span>
                     </span>
                   </h1>
                   <p>
                     I'm Surya Pranav Sukumaran, a recent Boston University
-                    graduate with an advanced degree in Applied Data Analytics,
-                    complemented by a Business Analytics degree from the Asian
-                    Institute of Technology. My expertise lies in harnessing the
-                    power of Python, R, SQL, and various web technologies, with
-                    a particular emphasis on machine learning and data
-                    visualization.
-                    <p></p>I thrive on solving complex challenges using an array
-                    of data-centric tools. My technical arsenal includes Pandas,
-                    Apache Spark, MLflow, AWS, TensorFlow, and Tableau, among
-                    others. On my site, you'll discover not just how data-driven
-                    solutions can lead to innovation and transformation, but
-                    also a journey into my professional world as a data analyst.
-                    Dive in to learn more about the impact of data in today's
-                    world and my role in it!
+                    graduate with a Master's degree in Applied Data Analytics.
+                    <p></p>
+                    My technical skills extends to robust technologies like
+                    Apache Spark and Kafka for big data processing, TensorFlow
+                    for building and deploying machine learning models, and
+                    PostgreSQL for database design and management. I am also
+                    proficient in cloud computing platforms, including AWS and
+                    Google Cloud, which are integral to managing scalable
+                    solutions. My favourite language is Python because of it's
+                    extensive capabilities and continued support within the
+                    community.
+                    <p></p>
+                    On my site, you'll find a selection of projects that
+                    showcase my hands-on experience with data-driven
+                    problem-solving, as well a bit about me. Feel free to look
+                    around and contact me if you have any questions!
                   </p>
                   <button onClick={() => console.log("connect")}>
                     Let’s Connect <ArrowRightCircle size={25} />
