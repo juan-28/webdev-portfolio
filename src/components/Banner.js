@@ -13,6 +13,19 @@ export const Banner = () => {
   const [index, setIndex] = useState(1);
   const toRotate = ["Data Analyst", "Data Scientist"];
   const period = 200;
+  const skills = [
+    "Python",
+    "Spark",
+    "Zeppelin",
+    "Kafka",
+    "TensorFlow",
+    "Keras",
+    "R",
+    "Tableau",
+    "PostgreSQL",
+    "AWS",
+    "Google Cloud", // Add more skills here
+  ];
 
   useEffect(() => {
     let ticker = setInterval(() => {
@@ -59,11 +72,7 @@ export const Banner = () => {
           <Col xs={12} md={6} xl={7}>
             <TrackVisibility>
               {({ isVisible }) => (
-                <div
-                  className={
-                    isVisible ? "animate__animated animate__fadeIn" : ""
-                  }
-                >
+                <div>
                   <div className="content-box">
                     {" "}
                     {/* New div wrapper */}
@@ -111,12 +120,16 @@ export const Banner = () => {
           <Col xs={12} md={6} xl={5}>
             <TrackVisibility>
               {({ isVisible }) => (
-                <div
-                  className={
-                    isVisible ? "animate__animated animate__zoomIn" : ""
-                  }
-                >
-                  {/* <img src={headerImg} alt="Header Img" /> */}
+                <div>
+                  {/* Skills and Technologies List */}
+                  <div className="skills-box">
+                    <span className="tagline">Skills and Technologies</span>
+                    <ul>
+                      {skills.map((skill, index) => (
+                        <li key={index}>{skill}</li>
+                      ))}
+                    </ul>
+                  </div>
                 </div>
               )}
             </TrackVisibility>

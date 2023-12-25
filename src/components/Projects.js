@@ -6,23 +6,27 @@ import projImg3 from "../assets/img/project-taxi.png";
 import colorSharp2 from "../assets/img/color-sharp2.png";
 import "animate.css";
 import TrackVisibility from "react-on-screen";
+import { Link } from "react-router-dom";
 
 export const Projects = () => {
   const projects = [
     {
-      title: "Business Startup",
-      description: "Design & Development",
+      title: "Music Recommendation System",
+      description: "Big Data Analytics",
       imgUrl: projImg1,
+      url: "https://github.com/juan-28/MusicRecSystem",
     },
     {
-      title: "Business Startup",
-      description: "Design & Development",
+      title: "Emotion Recognition",
+      description: "Deep Learning - Keras",
       imgUrl: projImg2,
+      url: "https://github.com/juan-28/Emotion-Recognition-Keras",
     },
     {
-      title: "Business Startup",
-      description: "Design & Development",
+      title: "NYC Taxi Big Data Visualization",
+      description: "Big Data - Apache Spark, Zeppelin",
       imgUrl: projImg3,
+      url: "",
     },
   ];
 
@@ -33,11 +37,7 @@ export const Projects = () => {
           <Col size={12}>
             <TrackVisibility>
               {({ isVisible }) => (
-                <div
-                  className={
-                    isVisible ? "animate__animated animate__fadeIn" : ""
-                  }
-                >
+                <div>
                   <h2>Projects</h2>
                   <p>
                     These are the projects that I have worked on the past year,
@@ -64,12 +64,7 @@ export const Projects = () => {
                         </Nav.Link>
                       </Nav.Item>
                     </Nav>
-                    <Tab.Content
-                      id="slideInUp"
-                      className={
-                        isVisible ? "animate__animated animate__slideInUp" : ""
-                      }
-                    >
+                    <Tab.Content>
                       <Tab.Pane eventKey="first">
                         <Row>
                           {projects.map((project, index) => {

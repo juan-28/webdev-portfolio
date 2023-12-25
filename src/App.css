@@ -340,6 +340,39 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow for depth */
 }
 
+/* Skills Box Styling */
+.skills-box {
+  padding: 20px;
+  border-radius: 10px;
+  border: 2px solid rgba(238, 211, 235, 0.122); /* Border around the box */
+  max-width: 600px; /* Maximum width of the box */
+  width: 100%; /* Width relative to parent container */
+  margin: 9px auto; /* Centering the box */
+}
+
+.skills-box h3 {
+  color: #ffffff; /* Dark text color, adjust as needed */
+  margin-bottom: 15px;
+  font-size: 40px; /* Larger font size for heading */
+  font-weight: 620; /* Bold font weight */
+}
+
+.skills-box ul {
+  list-style-type: none; /* Remove default list style */
+  padding: 0;
+  margin: 0;
+  columns: 2; /* Splitting the list into two columns */
+  -webkit-columns: 2; /* For webkit browsers */
+  -moz-columns: 2; /* For Mozilla browsers */
+}
+
+.skills-box ul li {
+  color: #b8b8b8; /* Darker text color for list items */
+  font-size: 20px; /* Font size for list items */
+  padding: 5px 0; /* Padding for each list item */
+  break-inside: avoid; /* Prevents breaking items across columns */
+}
+
 .banner img {
   animation: updown 3s linear infinite;
 }
